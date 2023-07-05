@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
-import ReduxProvider from "@/app/_globalRedux/provider";
-import Header from "@/app/_components/Header/header";
-import { ComponentWithChildrenProps } from "@/interfaces/ComponentWithChildrenProps.interface";
+import ReduxProvider from "@/app/(shared)/_globalRedux/provider";
+import Header from "@/app/(shared)/_components/header/header";
+import { ComponentWithChildrenProps } from "@/app/(shared)/_interfaces/ComponentWithChildrenProps.interface";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
