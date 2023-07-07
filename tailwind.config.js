@@ -19,8 +19,27 @@ module.exports = {
           100: "#4F556E",
           200: "#3B415C",
           300: "#3B4366",
+          400: "#1E202F",
         },
         black: "#111111",
+      },
+      fontFamily: {
+        rajdhani: ["var(--font-rajdhani)"],
+      },
+      backgroundImage: {
+        "blue-pattern": "url('/images/blue-bg.svg')",
+        "gray-pattern": "url('/images/gray-bg.svg')",
+        "maps-pattern": "url(/images/maps.jpg)",
+      },
+      keyframes: {
+        "move-card-bg": {
+          to: {
+            "background-position": "-600px 0",
+          },
+        },
+      },
+      spacing: {
+        header: "76px",
       },
     },
   },

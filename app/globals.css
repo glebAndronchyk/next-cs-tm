@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply cursor-default;
+}
+
 .flex-between-centered {
   @apply flex justify-between items-center;
+}
+
+.flex-centered {
+  @apply flex justify-center items-center;
+}
+
+.full-page {
+  height: calc(100vh - theme("spacing.header"));
+}
+
+.full-blur {
+  @apply w-full h-full absolute top-0 left-0 backdrop-blur-sm;
 }
