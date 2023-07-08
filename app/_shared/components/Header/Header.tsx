@@ -15,7 +15,7 @@ const Header = () => {
             <CsgoStatsPlayerSearch />
           </li>
         </ul>
-        <Link href="/login" className="flex justify-between items-center w-20 text-xl font-bold">
+        <Link href="/login" className="flex justify-between items-center w-20 text-xl font-bold text-blue-400">
           Login <LoginIcon />
         </Link>
       </Container>
