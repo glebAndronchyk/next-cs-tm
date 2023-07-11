@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 import { AnimationElementProps } from "@/app/_shared/lib/loading/AnimationElementProps.interface";
 import {
-  triggerAnimationEnd,
   triggerAnimatePhaseEnd,
+    triggerAnimationEnd,
 } from "@/app/_shared/redux/slices/editorSlice";
 import { AppDispatch } from "@/app/_shared/redux/store";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
