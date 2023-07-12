@@ -7,7 +7,7 @@ import logo from "@/public/images/cs2-logo.png";
 import { useRouter } from "next/navigation";
 
 interface DeclarativeLogoProps {
-  className: string;
+  className?: string;
   customOnClick?: MouseEventHandler<HTMLElement>;
 }
 
