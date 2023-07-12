@@ -1,8 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface EditorSliceInitialState {
   loading: {
     isPresented: boolean;
+    redirectTo: string;
     parentDisplay: "hidden" | "flex justify-end";
     isAnimatedOnEnter: boolean;
     isAnimatedOnExit: boolean;
@@ -11,6 +12,7 @@ interface EditorSliceInitialState {
 
 const initialState: EditorSliceInitialState = {
   loading: {
+    redirectTo: "/editor",
     isPresented: false,
     parentDisplay: "hidden",
     isAnimatedOnEnter: false,
@@ -22,6 +24,9 @@ const editorSlice = createSlice({
   name: "editor",
   initialState,
   reducers: {
+    setRedirectTo: (store, action: PayloadAction<string>) => {
+      store.loading.redirectTo = action.payload;
+    },
     triggerAnimatePhase: (store) => {
       store.loading.isPresented = true;
       store.loading.parentDisplay = "flex justify-end";
@@ -47,5 +52,6 @@ export const {
   triggerAnimatePhaseEnd,
   resetLoadingAnimationState,
   triggerAnimationEnd,
+  setRedirectTo,
 } = editorSlice.actions;
 export default editorSlice.reducer;

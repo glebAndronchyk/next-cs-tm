@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import logo from "@/public/images/cs2-logo.png";
 
-const Logo = () => {
+const ImperativeLogo = () => {
   return (
     <h1>
       <Link href="/">
@@ -13,4 +13,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default ImperativeLogo;

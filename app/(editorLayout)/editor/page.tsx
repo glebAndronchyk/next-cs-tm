@@ -1,10 +1,14 @@
+"use client";
+
 import ExitAnimationOnMount from "@/app/_shared/components/animations/EditorLoadingAnimation/ExitAnimationOnMount";
+import { useSearchParams } from "next/navigation";
+import Editor from "@/app/(editorLayout)/editor/_components/Editor/Editor";
 
 const EditorPage = () => {
-  return (
+    return (
     <>
       <ExitAnimationOnMount />
-      <div>test</div>
+      <Editor />
     </>
   );
 };

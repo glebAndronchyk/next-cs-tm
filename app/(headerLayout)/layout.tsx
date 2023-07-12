@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import "../globals.css";
 
-import Header from "@/app/_shared/components/Header/Header";
+import Header from "@/app/(headerLayout)/_components/Header/Header";
 
 export const metadata = {
   title: "CS - tactic manager",

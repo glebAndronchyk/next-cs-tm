@@ -11,9 +11,8 @@ import { getAnimationElements } from "@/app/_shared/lib/loading/getAnimationElem
 const EditorLoadingAnimation = () => {
   const dispatch = useAppDispatch();
   const router = useRouter();
-  const { isPresented, isAnimatedOnEnter, parentDisplay } = useAppSelector(
-    (state) => state.editor.loading
-  );
+  const { isPresented, isAnimatedOnEnter, parentDisplay, redirectTo } =
+    useAppSelector((state) => state.editor.loading);
 
   const animationItems = getAnimationElements();
 
@@ -31,6 +30,7 @@ const EditorLoadingAnimation = () => {
                 router={router}
                 isLast={isLast}
                 alreadyAnimated={isAnimatedOnEnter}
+                redirectTo={redirectTo}
                 {...rest}
               />
             )}

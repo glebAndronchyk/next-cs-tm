@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { AnimationElementProps } from "@/app/_shared/lib/loading/AnimationElementProps.interface";
 import {
   triggerAnimatePhaseEnd,
-    triggerAnimationEnd,
+  triggerAnimationEnd,
 } from "@/app/_shared/redux/slices/editorSlice";
 import { AppDispatch } from "@/app/_shared/redux/store";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
@@ -13,6 +13,7 @@ interface AnimationItemProps extends Omit<AnimationElementProps, "id"> {
   router: AppRouterInstance;
   isLast: boolean;
   alreadyAnimated: boolean;
+  redirectTo: string;
 }
 
 const AnimationItem = ({
@@ -23,6 +24,7 @@ const AnimationItem = ({
   dispatch,
   router,
   alreadyAnimated,
+  redirectTo,
 }: AnimationItemProps) => {
   return (
     <motion.div
@@ -45,7 +47,7 @@ const AnimationItem = ({
         }
         if (isLast) {
           dispatch(triggerAnimatePhaseEnd());
-          router.push("/editor");
+          router.push(redirectTo);
         }
       }}
       className={`relative lg:w-48 xl:w-56 2xl:w-64 shrink-0 h-full ${background} -skew-x-12`}
