@@ -3,9 +3,7 @@ import {
   SelectorTPlayer,
   SelectorCTPlayer,
 } from "@/app/_shared/redux/slices/editor/types/page.types";
-import { EArmor } from "@/app/_shared/enums/EArmor";
-import { EOnSideColor } from "@/app/_shared/enums/EPlayerColor";
-import { EPistols } from "@/app/_shared/enums/EWeapons";
+import { EArmor, EOnSideColor, EPistols } from "@/app/_shared/enums/gameEnums";
 import { defaultGrenades } from "@/app/_shared/constants/defaultGrenades";
 
 type DefaultSelectorOmit = "secondary" | "color" | "defKits" | "utility";

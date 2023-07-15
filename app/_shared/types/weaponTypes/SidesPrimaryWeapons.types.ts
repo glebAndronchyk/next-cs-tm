@@ -1,4 +1,4 @@
-import { EHeavy, ERifles, ESMGs } from "@/app/_shared/enums/EWeapons";
+import { EHeavy, ERifles, ESMGs } from "@/app/_shared/enums/gameEnums";
 
 export type BothSidesRifles = ERifles.AWP | ERifles.SSG;
 export type BothSidesSMGs = ESMGs.P90 | ESMGs.BIZON | ESMGs.UMP | ESMGs.MP7;
@@ -27,7 +27,7 @@ export type HeavyCT = EHeavy.MAG7;
 export type OnlyTPrimary = RiflesT & SMGsT & HeavyT;
 export type OnlyCTPrimary = RiflesCT & SMGsCT & HeavyCT;
 
-export type AllPrimaryWeapons =  BothSidesPrimary & OnlyTPrimary & OnlyCTPrimary;
+export type AllPrimaryWeapons = BothSidesPrimary & OnlyTPrimary & OnlyCTPrimary;
 
 export type TPrimaryWeapons = BothSidesPrimary | OnlyTPrimary;
 export type CTPrimaryWeapons = BothSidesPrimary | OnlyCTPrimary;

@@ -1,5 +1,4 @@
 import { ErrorObject } from "@/app/_shared/types/ErrorObject.type";
-import { EGameSides } from "@/app/_shared/enums/EGameSides";
 import {
   CTPrimaryWeapons,
   TPrimaryWeapons,
@@ -8,13 +7,14 @@ import {
   CTSecondaryWeapons,
   TSecondaryWeapons,
 } from "@/app/_shared/types/weaponTypes/SidesSecondaryWepons.types";
-import { EArmor } from "@/app/_shared/enums/EArmor";
 import {
   UtilitiesCT,
   UtilitiesT,
 } from "@/app/_shared/types/weaponTypes/UtilitiesObject.type";
 import { Coordinates2D } from "@/app/_shared/types/Coordinates2D.type";
 import { PlayerColor } from "@/app/_shared/types/PlayerColor.type";
+
+import { EGameSides, EArmor } from "@/app/_shared/enums/gameEnums";
 
 export interface EditorPageSliceInitial {
   name: string;

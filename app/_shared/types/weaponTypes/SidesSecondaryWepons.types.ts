@@ -1,4 +1,4 @@
-import { EPistols } from "@/app/_shared/enums/EWeapons";
+import { EPistols } from "@/app/_shared/enums/gameEnums/EWeapons";
 
 export type BothSidesSecondary =
   | EPistols.CZ75

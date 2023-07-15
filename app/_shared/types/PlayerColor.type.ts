@@ -1,3 +1,3 @@
-import { EOnSideColor, EOnTeamColor } from "@/app/_shared/enums/EPlayerColor";
+import { EOnSideColor, EOnTeamColor } from "@/app/_shared/enums/gameEnums";
 
 export type PlayerColor = EOnSideColor | EOnTeamColor;

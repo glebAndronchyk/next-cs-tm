@@ -1,4 +1,4 @@
-import { EGrenades } from "@/app/_shared/enums/EGrenades";
+import { EGrenades } from "@/app/_shared/enums/gameEnums";
 
 export type AllUtilities = {
   [G in EGrenades]: number;

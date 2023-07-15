@@ -5,7 +5,7 @@ import {
   TacticMapObject,
 } from "@/app/_shared/redux/slices/editor/types/page.types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { EGameSides } from "@/app/_shared/enums/EGameSides";
+import { EGameSides } from "@/app/_shared/enums/gameEnums";
 import {
   defaultCTPlayer,
   defaultTPlayer,
