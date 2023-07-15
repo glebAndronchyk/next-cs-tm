@@ -1,4 +1,4 @@
-import { TransitionAnimationValues } from "@/app/_shared/interfaces/animation/TransitionAnimationValues";
+import { TransitionAnimationValues } from "@/app/_shared/types/animation/TransitionAnimationValues";
 
 export interface AnimationElementProps {
   id: number;

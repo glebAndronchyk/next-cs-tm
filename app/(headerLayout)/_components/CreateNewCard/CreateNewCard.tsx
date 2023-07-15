@@ -3,7 +3,7 @@
 import SkewNotify from "@/app/_shared/components/ui/SkewNotify/SkewNotify";
 import Card from "@/app/_shared/components/ui/Card/Card";
 import { useAppDispatch } from "@/app/_shared/hooks/useAppDispatch";
-import { triggerAnimatePhase } from "@/app/_shared/redux/slices/editorSlice";
+import { triggerAnimatePhase } from "@/app/_shared/redux/slices/editor";
 
 const CreateNewCard = () => {
   const dispatch = useAppDispatch();

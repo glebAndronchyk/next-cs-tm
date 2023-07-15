@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { MetricsTailwind } from "@/app/_shared/interfaces/MetricsTailwind.interface";
+import { MetricsTailwind } from "@/app/_shared/types/MetricsTailwind.interface";
 
 interface SkewNotifyProps {
   children: ReactNode;

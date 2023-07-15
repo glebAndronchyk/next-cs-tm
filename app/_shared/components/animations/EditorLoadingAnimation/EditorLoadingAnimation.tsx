@@ -12,7 +12,7 @@ const EditorLoadingAnimation = () => {
   const dispatch = useAppDispatch();
   const router = useRouter();
   const { isPresented, isAnimatedOnEnter, parentDisplay, redirectTo } =
-    useAppSelector((state) => state.editor.loading);
+    useAppSelector((state) => state.editorLoading);
 
   const animationItems = getAnimationElements();
 

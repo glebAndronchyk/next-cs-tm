@@ -1,10 +1,10 @@
 import Container from "@/app/_shared/components/ui/Container/Container";
 import TacticManagerLogo from "@/app/_shared/components/ui/TacticManagerLogo/TacticManagerLogo";
 
-import { MetricsTailwind } from "@/app/_shared/interfaces/MetricsTailwind.interface";
+import { MetricsTailwind } from "@/app/_shared/types/MetricsTailwind.interface";
 
 interface BannerProps {
-  tailwindWidth?: MetricsTailwind["tailwindWidth"];
+  tailwindWidth?: MetricsTailwind["width"];
 }
 
 const Banner = ({ tailwindWidth = "w-full" }: BannerProps) => {

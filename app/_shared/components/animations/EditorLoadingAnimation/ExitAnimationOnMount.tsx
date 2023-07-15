@@ -7,11 +7,11 @@ import { useAppSelector } from "@/app/_shared/hooks/useAppSelector";
 import {
   resetLoadingAnimationState,
   triggerExitPhase,
-} from "@/app/_shared/redux/slices/editorSlice";
+} from "@/app/_shared/redux/slices/editor";
 
 const ExitAnimationOnMount = () => {
   const dispatch = useAppDispatch();
-  const { isAnimatedOnExit } = useAppSelector((state) => state.editor.loading);
+  const { isAnimatedOnExit } = useAppSelector((state) => state.editorLoading);
 
   useEffect(() => {
     if (!isAnimatedOnExit) {

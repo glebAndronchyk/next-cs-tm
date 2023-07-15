@@ -1,3 +1,5 @@
+'use client'
+
 import { useSearchParams } from "next/navigation";
 import TeamCard from "@/app/_shared/components/TeamCard/TeamCard";
 

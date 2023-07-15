@@ -4,7 +4,7 @@ import { AnimationElementProps } from "@/app/_shared/lib/loading/AnimationElemen
 import {
   triggerAnimatePhaseEnd,
   triggerAnimationEnd,
-} from "@/app/_shared/redux/slices/editorSlice";
+} from "@/app/_shared/redux/slices/editor";
 import { AppDispatch } from "@/app/_shared/redux/store";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 

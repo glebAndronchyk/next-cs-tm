@@ -6,7 +6,7 @@ import DeclarativeLogo from "@/app/_shared/components/ui/logos/DeclarativeLogo/D
 import {
   setRedirectTo,
   triggerAnimatePhase,
-} from "@/app/_shared/redux/slices/editorSlice";
+} from "@/app/_shared/redux/slices/editor";
 
 const EditorLogo = () => {
   const dispatch = useAppDispatch();
