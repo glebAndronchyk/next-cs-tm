@@ -1,12 +1,12 @@
 import Container from "@/app/_shared/components/ui/Container/Container";
 import Banner from "@/app/_shared/components/ui/Banner/Banner";
 import CreateNewCard from "@/app/(headerLayout)/_components/CreateNewCard/CreateNewCard";
-import ExitAnimationOnMount from "@/app/_shared/components/animations/EditorLoadingAnimation/ExitAnimationOnMount";
+import ExitTrigger from "@/app/_shared/components/animations/EditorLoadingAnimation/ExitTrigger";
 
 const HomePage = () => {
   return (
     <>
-      <ExitAnimationOnMount />
+      <ExitTrigger />
       <section className="bg-gray-pattern bg-cover py-6 bg-no-repeat full-page">
         <Container>
           <Banner />

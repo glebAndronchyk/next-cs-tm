@@ -53,11 +53,11 @@ const editorPageSlice = createSlice({
       store.isShowAddButton = true;
     },
     pickSide: (store, action: PayloadAction<EGameSides>) => {
-      store.team = action.payload;
-      store.locked = false;
-      const team = store.team;
-
+      const team = action.payload;
+      store.team = team;
       store.selectors[team].players[0].color = getRandomAvailableColor();
+
+      store.locked = false;
     },
     addNewPlayer: (store, action: PayloadAction<EGameSides>) => {
       const selector = action.payload;
@@ -87,6 +87,7 @@ const editorPageSlice = createSlice({
 
       store.selectors[sideSelector].players[playerIndex].color = color;
     },
+    resetEditor: () => initialState,
     // setGrenade: (store, action: PayloadAction<SetGrenadePayload>) => {
     //   const { player, grenade } = action.payload;
     //   const { sideSelector, id } = player;

@@ -9,7 +9,7 @@ import {
   triggerExitPhase,
 } from "@/app/_shared/redux/slices/editor";
 
-const ExitAnimationOnMount = () => {
+const ExitTrigger = () => {
   const dispatch = useAppDispatch();
   const { isAnimatedOnExit } = useAppSelector((state) => state.editorLoading);
 
@@ -25,4 +25,4 @@ const ExitAnimationOnMount = () => {
   return null;
 };
 
-export default ExitAnimationOnMount;
+export default ExitTrigger;

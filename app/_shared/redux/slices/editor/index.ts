@@ -18,5 +18,6 @@ export const {
   setColor,
   setWeapon,
   addNewPlayer,
+  resetEditor,
 } = { ...loadingState.actions, ...pageState.actions };
 export default editorReducers;

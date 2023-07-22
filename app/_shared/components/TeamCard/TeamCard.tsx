@@ -5,6 +5,8 @@ import { EGameSides } from "@/app/_shared/enums/gameEnums";
 import { EFullTeamNamings } from "@/app/_shared/enums/gameEnums/EFullTeamNamings";
 import AddNewButton from "@/app/(editorLayout)/editor/_components/AddNewButton/AddNewButton";
 import { useAppSelector } from "@/app/_shared/hooks/useAppSelector";
+import LockedCardView from "@/app/_shared/components/TeamCard/LockedCardView/LockedCardView";
+import { AnimatePresence } from "framer-motion";
 
 const TeamCard = ({ side }: { side: EGameSides }) => {
   const { selectors, locked } = useAppSelector((state) => state.editorPage);
@@ -15,8 +17,10 @@ const TeamCard = ({ side }: { side: EGameSides }) => {
       : EFullTeamNamings.TERRORISTS;
 
   return (
-    <section className="items-stretch relative w-96">
-      {locked && <div className="absolute h-full w-full bg-red-700" />}
+    <section className="relative w-96 rounded-lg overflow-hidden">
+      <AnimatePresence>
+        {locked && <LockedCardView title={titleText} side={side} />}
+      </AnimatePresence>
       <Card className="w-full h-full">
         <h3>{titleText}</h3>
         <ul>

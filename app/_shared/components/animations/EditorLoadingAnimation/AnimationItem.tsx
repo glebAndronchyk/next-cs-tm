@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { AnimationElementProps } from "@/app/_shared/lib/loading/AnimationElementProps.interface";
 import {
+  resetEditor,
   triggerAnimatePhaseEnd,
   triggerAnimationEnd,
 } from "@/app/_shared/redux/slices/editor";
@@ -44,6 +45,7 @@ const AnimationItem = ({
       onAnimationComplete={() => {
         if (isLast && alreadyAnimated) {
           dispatch(triggerAnimationEnd());
+          dispatch(resetEditor());
         }
         if (isLast) {
           dispatch(triggerAnimatePhaseEnd());
