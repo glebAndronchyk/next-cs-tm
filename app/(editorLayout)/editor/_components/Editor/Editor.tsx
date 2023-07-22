@@ -1,17 +1,12 @@
-'use client'
-
-import { useSearchParams } from "next/navigation";
 import TeamCard from "@/app/_shared/components/TeamCard/TeamCard";
+import { EGameSides } from "@/app/_shared/enums/gameEnums";
 
 const Editor = () => {
-  const urlQuery = useSearchParams();
-  const tacticId = urlQuery.get("tactic");
-
   return (
-    <div className="flex justify-between">
-      <TeamCard title="Counter-Terrorists" />
-      <TeamCard title="Terrorists" />
-    </div>
+    <>
+      <TeamCard side={EGameSides.COUNTER_TERRORISTS} />
+      <TeamCard side={EGameSides.TERRORISTS} />
+    </>
   );
 };
 

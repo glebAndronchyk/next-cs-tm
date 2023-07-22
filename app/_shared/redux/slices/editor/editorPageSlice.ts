@@ -18,6 +18,7 @@ import { getRandomAvailableColor } from "@/app/_shared/redux/slices/editor/utils
 
 const initialState: EditorPageSliceInitial = {
   name: "Tactic",
+  locked: true,
   selectors: {
     ct: {
       players: [
@@ -53,6 +54,7 @@ const editorPageSlice = createSlice({
     },
     pickSide: (store, action: PayloadAction<EGameSides>) => {
       store.team = action.payload;
+      store.locked = false;
       const team = store.team;
 
       store.selectors[team].players[0].color = getRandomAvailableColor();
@@ -63,6 +65,7 @@ const editorPageSlice = createSlice({
       const player: SelectorTPlayer | SelectorCTPlayer = isCT
         ? { ...defaultCTPlayer }
         : { ...defaultTPlayer };
+      player.id = store.selectors[selector].players.at(-1)!.id + 1;
       if (selector === store.team) {
         player.color = getRandomAvailableColor();
       }

@@ -18,6 +18,7 @@ import { EGameSides, EArmor } from "@/app/_shared/enums/gameEnums";
 
 export interface EditorPageSliceInitial {
   name: string;
+  locked: boolean;
   team: EGameSides | null;
   map: TacticMapObject | null;
   error: ErrorObject | null | string;
@@ -47,7 +48,8 @@ export interface MapScreen {
   arrows: Arrow[];
 }
 
-export interface PlayerOnMap extends Pick<SelectorPlayerBase, "color" | "id"> {
+export interface PlayerOnMap
+  extends Required<Pick<SelectorPlayerBase, "color" | "id">> {
   position: Coordinates2D;
 }
 
@@ -71,7 +73,7 @@ export interface SelectorPlayerBase {
   id: number;
   armor: EArmor;
   avatar: string;
-  color: PlayerColor;
+  color?: PlayerColor;
   defKits: boolean;
   money: number;
   name: string;
