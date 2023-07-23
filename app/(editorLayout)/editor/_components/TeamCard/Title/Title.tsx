@@ -1,4 +1,3 @@
-import { EGameSides } from "@/app/_shared/enums/gameEnums";
 import { EFullTeamNamings } from "@/app/_shared/enums/gameEnums/EFullTeamNamings";
 import classNames from "classnames";
 

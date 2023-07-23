@@ -1,6 +1,6 @@
 import CheckIcon from "@/app/_shared/components/ui/icons/CheckIcon";
 import AnimatedTriangleNotify from "@/app/_shared/components/ui/notifications/AnimatedTriangleNotify/AnimatedTriangleNotify";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { EGameSides } from "@/app/_shared/enums/gameEnums";
 import { useEffect, useState } from "react";
 
