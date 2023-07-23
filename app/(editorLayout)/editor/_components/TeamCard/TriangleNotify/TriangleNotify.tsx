@@ -40,7 +40,7 @@ const TriangleNotify = ({
               duration: 0.5,
             },
           }}
-          className={`w-20 h-16 bg-green-700 ${notifyColor}`}
+          className={`w-20 h-16 ${notifyColor}`}
         >
           <CheckIcon className="absolute top-2 right-2 w-7 h-7 stroke-blue-400" />
         </AnimatedTriangleNotify>

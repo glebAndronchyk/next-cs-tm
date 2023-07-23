@@ -1,12 +1,12 @@
 export enum EOnSideColor {
-  T = "color_t",
-  CT = "color_ct",
+  T = "t-color",
+  CT = "ct-color",
 }
 
 export enum EOnTeamColor {
-  GREEN = "color_green",
-  PURPLE = "color_purple",
-  ORANGE = "color_orange",
-  YELLOW = "color_yellow",
-  BLUE = "color_blue",
+  GREEN = "green",
+  PURPLE = "purple",
+  ORANGE = "orange",
+  YELLOW = "yellow",
+  BLUE = "blue",
 }

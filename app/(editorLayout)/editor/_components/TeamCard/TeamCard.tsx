@@ -8,6 +8,7 @@ import { useAppSelector } from "@/app/_shared/hooks/useAppSelector";
 import LockedCardView from "@/app/(editorLayout)/editor/_components/TeamCard/LockedCardView/LockedCardView";
 import TriangleNotify from "@/app/(editorLayout)/editor/_components/TeamCard/TriangleNotify/TriangleNotify";
 import Title from "@/app/(editorLayout)/editor/_components/TeamCard/Title/Title";
+import Player from "@/app/(editorLayout)/editor/_components/Player/Player";
 
 const TeamCard = ({ side }: { side: EGameSides }) => {
   const { selectors, locked, team } = useAppSelector(
@@ -27,7 +28,7 @@ const TeamCard = ({ side }: { side: EGameSides }) => {
         <Title text={titleText} />
         <ul>
           {players.map((player) => (
-            <li key={player.id}>{player.name}</li>
+            <Player key={player.id} side={side} player={player} />
           ))}
         </ul>
         {players.length < 5 && <AddNewButton disabled={locked} addTo={side} />}

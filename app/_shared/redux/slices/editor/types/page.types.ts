@@ -14,7 +14,11 @@ import {
 import { Coordinates2D } from "@/app/_shared/types/Coordinates2D.type";
 import { PlayerColor } from "@/app/_shared/types/PlayerColor.type";
 
-import { EGameSides, EArmor } from "@/app/_shared/enums/gameEnums";
+import {
+  EGameSides,
+  EArmor,
+  EOnTeamColor,
+} from "@/app/_shared/enums/gameEnums";
 
 export interface EditorPageSliceInitial {
   name: string;
@@ -24,6 +28,7 @@ export interface EditorPageSliceInitial {
   error: ErrorObject | null | string;
   isShowAddButton: boolean;
   isChanged: boolean;
+  availableColors: EOnTeamColor[];
   selectors: {
     ct: SelectorBlock<SelectorCTPlayer>;
     t: SelectorBlock<SelectorTPlayer>;
@@ -73,7 +78,7 @@ export interface SelectorPlayerBase {
   id: number;
   armor: EArmor;
   avatar: string;
-  color?: PlayerColor;
+  color: PlayerColor;
   defKits: boolean;
   money: number;
   name: string;

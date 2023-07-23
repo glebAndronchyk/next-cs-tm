@@ -5,7 +5,7 @@ import {
   TacticMapObject,
 } from "@/app/_shared/redux/slices/editor/types/page.types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { EGameSides } from "@/app/_shared/enums/gameEnums";
+import { EGameSides, EOnTeamColor } from "@/app/_shared/enums/gameEnums";
 import {
   defaultCTPlayer,
   defaultTPlayer,
@@ -19,6 +19,13 @@ import { getRandomAvailableColor } from "@/app/_shared/redux/slices/editor/utils
 const initialState: EditorPageSliceInitial = {
   name: "Tactic",
   locked: true,
+  availableColors: [
+    EOnTeamColor.BLUE,
+    EOnTeamColor.GREEN,
+    EOnTeamColor.PURPLE,
+    EOnTeamColor.YELLOW,
+    EOnTeamColor.ORANGE,
+  ],
   selectors: {
     ct: {
       players: [
@@ -55,7 +62,9 @@ const editorPageSlice = createSlice({
     pickSide: (store, action: PayloadAction<EGameSides>) => {
       const team = action.payload;
       store.team = team;
-      store.selectors[team].players[0].color = getRandomAvailableColor();
+      store.selectors[team].players[0].color = getRandomAvailableColor(
+        store.availableColors
+      );
 
       store.locked = false;
     },
@@ -67,7 +76,7 @@ const editorPageSlice = createSlice({
         : { ...defaultTPlayer };
       player.id = store.selectors[selector].players.at(-1)!.id + 1;
       if (selector === store.team) {
-        player.color = getRandomAvailableColor();
+        player.color = getRandomAvailableColor(store.availableColors);
       }
 
       store.selectors[selector].players.push(player as any);

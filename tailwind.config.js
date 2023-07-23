@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         "primary-orange": "#E38617",
         "secondary-orange": "#D56811",
+        "orange-teammate": "#eda338",
+        "yellow-teammate": "#e6f13d",
+        "green-teammate": "#109856",
+        "purple-teammate": "#803ca1",
+        "blue-teammate": "#68a3e5",
         gray: {
           100: "#E5E5E5",
           200: "#D9D9D9",
