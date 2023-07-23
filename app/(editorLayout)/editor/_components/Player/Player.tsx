@@ -24,7 +24,21 @@ const Player = ({
       animate={{ opacity: 1 }}
       className={playerClassName}
     >
-      {player.name}
+      <button className='absolute' />
+      <div className="flex-between-centered">
+        <div className="flex-between-centered gap-2">
+          {player.name}
+          {true && <div>kits</div>}
+        </div>
+        <p>${player.money}</p>
+      </div>
+      <div className="flex-between-centered">
+        <div className="flex-between-centered gap-2">
+          <div>pw</div>
+          <div>sw</div>
+        </div>
+        <div>nades</div>
+      </div>
     </motion.li>
   );
 };
