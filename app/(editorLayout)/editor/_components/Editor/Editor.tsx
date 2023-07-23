@@ -1,4 +1,4 @@
-import TeamCard from "@/app/_shared/components/TeamCard/TeamCard";
+import TeamCard from "@/app/(editorLayout)/editor/_components/TeamCard/TeamCard";
 import { EGameSides } from "@/app/_shared/enums/gameEnums";
 
 const Editor = () => {

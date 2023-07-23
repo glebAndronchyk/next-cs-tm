@@ -12,7 +12,7 @@ type CardProps = {
 };
 
 const Card = ({ className, onClick, children, asLink, href }: CardProps) => {
-  const cardClassName = `p-4 bg-white w-20 h-20 ${className}`;
+  const cardClassName = `p-4 w-20 h-20 ${className}`;
 
   if (asLink && href) {
     return (

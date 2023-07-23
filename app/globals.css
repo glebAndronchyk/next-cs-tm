@@ -26,3 +26,19 @@ h6 {
 .full-blur {
   @apply w-full h-full absolute top-0 left-0 backdrop-blur-sm;
 }
+
+.clip-tr-top-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+
+.clip-tr-top-left {
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+}
+
+.clip-tr-bottom-right {
+  clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
+}
+
+.clip-tr-bottom-left {
+  clip-path: polygon(100% 100%, 0% 100%, 0% 0%);
+}

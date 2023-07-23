@@ -5,11 +5,14 @@ import { EGameSides } from "@/app/_shared/enums/gameEnums";
 import { EFullTeamNamings } from "@/app/_shared/enums/gameEnums/EFullTeamNamings";
 import AddNewButton from "@/app/(editorLayout)/editor/_components/AddNewButton/AddNewButton";
 import { useAppSelector } from "@/app/_shared/hooks/useAppSelector";
-import LockedCardView from "@/app/_shared/components/TeamCard/LockedCardView/LockedCardView";
-import { AnimatePresence } from "framer-motion";
+import LockedCardView from "@/app/(editorLayout)/editor/_components/TeamCard/LockedCardView/LockedCardView";
+import TriangleNotify from "@/app/(editorLayout)/editor/_components/TeamCard/TriangleNotify/TriangleNotify";
+import Title from "@/app/(editorLayout)/editor/_components/TeamCard/Title/Title";
 
 const TeamCard = ({ side }: { side: EGameSides }) => {
-  const { selectors, locked } = useAppSelector((state) => state.editorPage);
+  const { selectors, locked, team } = useAppSelector(
+    (state) => state.editorPage
+  );
   const players = selectors[side].players;
   const titleText =
     side === EGameSides.COUNTER_TERRORISTS
@@ -18,11 +21,10 @@ const TeamCard = ({ side }: { side: EGameSides }) => {
 
   return (
     <section className="relative w-96 rounded-lg overflow-hidden">
-      <AnimatePresence>
-        {locked && <LockedCardView title={titleText} side={side} />}
-      </AnimatePresence>
-      <Card className="w-full h-full">
-        <h3>{titleText}</h3>
+      <LockedCardView title={titleText} side={side} locked={locked} />
+      <Card className="w-full h-full bg-blue-400">
+        <TriangleNotify side={side} pickedTeam={team} />
+        <Title text={titleText} />
         <ul>
           {players.map((player) => (
             <li key={player.id}>{player.name}</li>
